@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.sacramento {
+    font-family: 'Sacramento', cursive;
+}
+
+:root {
+    --rosa-pastel: #f8bbd9;
+    --dorado: #d4af37;
+    --beige: #f5f5dc;
+    --beige-oscuro: #e8e0d1;
+    --rosa-claro: #fce7f3;
+}
+
+.cruz {
+    display: block;
+    margin: 40px auto;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.decor-img {
+    position: absolute;
+    top: -2.5rem;
+    right: -2.5rem;
+    width: 18rem;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .decor-img {
+        width: 14rem;
+        top: -1rem;
+        right: -1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .decor-img {
+        width: 9rem;
+        top: 0;
+        right: 0.5rem;
+    }
+}
+.decor-img-left {
+    position: absolute;
+    top: 17.5rem;
+    left: -10.5rem;
+    width: 28rem;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .decor-img-left {
+        width: 20rem;
+        top: 14rem;
+        left: -6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .decor-img-left {
+        width: 14rem;
+        top: 1rem;
+        left: -6rem;
+    }
+}
+
+.decor-imgen {
+    position: absolute;
+    top: 72.5rem;
+    right: -2.5rem;
+    width: 18rem;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .decor-imgen {
+        width: 14rem;
+        top: 60rem;
+        right: -1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .decor-imgen {
+        width: 7rem;
+        top: 34rem;
+        right: 0.5rem;
+    }
+}
+
+.decor-img-left- {
+    position: absolute;
+    top: 63.5rem;
+    left: -10.5rem;
+    width: 28rem;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .decor-img-left- {
+        width: 20rem;
+        top: 55rem;
+        left: -6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .decor-img-left- {
+        width: 12rem;
+        top: 27rem;
+        left: -4rem;
+    }
+}
+
+
+.decor-img-ultima {
+    position: absolute;
+    top: 120.5rem;
+    right: -2.5rem;
+    width: 18rem;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .decor-img-ultima {
+        width: 14rem;
+        top: 100rem;
+        right: -1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .decor-img-ultima {
+        width: 10rem;
+        top: 85rem;
+        right: -0.5rem;
+    }
+}
+
+.bg-dorado {
+    background-color: var(--dorado);
+}
+
+.bg-beige {
+    background-color: var(--beige);
+}
+
+.bg-beige-oscuro {
+    background-color: var(--beige-oscuro);
+}
+
+.text-rosa-pastel {
+    color: var(--rosa-pastel);
+}
+
+.text-dorado {
+    color: var(--dorado);
+}
+
+.text-beige {
+    color: var(--beige);
+}
+
+.border-rosa-pastel {
+    border-color: var(--rosa-pastel);
+}
+
+.border-dorado {
+    border-color: var(--dorado);
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, var(--rosa-pastel) 0%, var(--beige) 50%, var(--dorado) 100%);
+}
+
+.hero-bg {
+    background: linear-gradient(#faf7f4, rgba(255, 255, 255, 0.95));
+    position: relative;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="400" cy="700" r="120" fill="url(%23a)"/></svg>');
+    animation: float 6s ease-in-out infinite;
+}
+
+.mi-estilo-personal {
+    padding: 30px;
+    margin-bottom: 30px;
+    background: #fffef9;
+    border-radius: 20px;
+    border: 2px solid rgba(218, 195, 107, 0.15);
+    box-shadow: 0 0 30px rgba(218, 195, 107, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.floating-element {
+    position: absolute;
+    font-size: 30px;
+    animation: floatElement 6s linear infinite;
+}
+
+@keyframes floatElement {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.countdown-box {
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #fffef9;
+    border-radius: 20px;
+    border: 2px solid rgba(218, 195, 107, 0.15);
+    box-shadow: 0 0 30px rgba(218, 195, 107, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.rsvp-form {
+    background: linear-gradient(135deg, #8e7939, rgba(218, 195, 107, 0.2));
+
+    color: white;
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--rosa-pastel) !important;
+    transform: translateY(-2px);
+}
+
+.section-divider {
+    height: 4px;
+    background: linear-gradient(135deg, #8e7939, rgba(218, 195, 107, 0.2));
+
+    border-radius: 2px;
+    width: 80px;
+    margin: 0 auto 30px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #d4a373, #fcebb5);
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(248, 187, 217, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(248, 187, 217, 0.3);
+}
+.birthday-theme {
+    background: linear-gradient(135deg, #f7c6b8, #d4a373);
+}
+
+.baptism-theme {
+    background: linear-gradient(135deg, #d4a373, #fcebb5);
+}
+
+.dual-celebration {
+    background: linear-gradient(45deg, #8e7939 0%, rgba(218, 195, 107, 0.2) 50%, #fffef9 100%);
+}
+
+
+.parents-section {
+    padding: 30px;
+    margin-bottom: 30px;
+    background: #fffef9;
+    border-radius: 20px;
+    border: 2px solid rgba(218, 195, 107, 0.15);
+    box-shadow: 0 0 30px rgba(218, 195, 107, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.parents-names {
+    color: #4a5568;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.invitation-text {
+    color: #718096;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.rsvp-option {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.rsvp-option:hover {
+    transform: scale(1.05);
+}
+
+.rsvp-option.selected {
+    border-color: var(--dorado);
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.admin-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.admin-button {
+    background: linear-gradient(45deg, #4a5568, #2d3748);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-button:hover {
+    transform: scale(1.1);
+}
+
+.admin-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
+}
+
+.admin-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    width: 600px;
+}
+
+.guest-item {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-attending {
+    color: #10b981;
+    font-weight: bold;
+}
+
+.status-not-attending {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .parents-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
